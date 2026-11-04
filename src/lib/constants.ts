@@ -7,6 +7,18 @@ export const TAGLINE = 'Smart Healthcare. Less Waiting.';
 export const ESTIMATED_MINUTES_PER_PATIENT = 10;
 export const STAFF_INVITATION_CODE = 'STAFF-2026';
 
+export const HOSPITAL = {
+  name: 'TY-Dental-Medicity',
+  location: '25D, Lucknow',
+  hours: '9:00 AM – 6:00 PM',
+  lunchBreak: '12:00 PM – 1:00 PM',
+  doctorName: 'Dr. Tanya Yadav',
+  doctorTitle: 'BDS, MDS — Conservative Dentistry & Endodontics',
+  doctorExperience: '12+ years of experience',
+  doctorBio:
+    'Dr. Tanya Yadav is a senior dental surgeon specializing in restorative and cosmetic dentistry. She has treated over 5,000 patients across root canals, implants, and routine dental care, combining advanced techniques with a gentle, patient-first approach.',
+};
+
 export const STATUS_CONFIG: Record<
   AppointmentStatus,
   { label: string; bg: string; text: string; dot: string; border: string }

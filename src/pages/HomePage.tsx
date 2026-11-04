@@ -9,9 +9,14 @@ import {
   Activity,
   Users,
   Sparkles,
+  MapPin,
+  Utensils,
+  GraduationCap,
+  Award,
+  Heart,
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
-import { SERVICE_NAME, TAGLINE, DEPARTMENT } from '@/lib/constants';
+import { SERVICE_NAME, TAGLINE, DEPARTMENT, HOSPITAL } from '@/lib/constants';
 
 export default function HomePage() {
   const { profile } = useAuth();
@@ -216,6 +221,105 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Hospital Info */}
+      <section className="py-20 lg:py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+              About {HOSPITAL.name}
+            </h2>
+            <p className="mt-4 text-slate-600 text-lg">
+              Your trusted dental care partner in Lucknow.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            {/* Doctor card */}
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-6 text-white">
+                <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur flex items-center justify-center mb-3">
+                  <Stethoscope className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold">{HOSPITAL.doctorName}</h3>
+                <p className="text-sm text-blue-200 mt-1">{HOSPITAL.doctorTitle}</p>
+              </div>
+              <div className="p-6 space-y-3">
+                <div className="flex items-start gap-2.5 text-sm text-slate-600">
+                  <Award className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <span>{HOSPITAL.doctorExperience}</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-sm text-slate-600 leading-relaxed">
+                  <Heart className="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0" />
+                  <span>{HOSPITAL.doctorBio}</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-sm text-slate-600">
+                  <GraduationCap className="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0" />
+                  <span>Specialty: Conservative Dentistry & Endodontics</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Timing card */}
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+              <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-4">
+                <Clock className="w-6 h-6 text-amber-600" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">Hospital Timings</h3>
+              <div className="mt-5 space-y-4">
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-blue-50 border border-blue-100">
+                  <div className="flex items-center gap-2.5">
+                    <CalendarCheck className="w-4 h-4 text-blue-600" />
+                    <span className="text-sm font-semibold text-slate-700">OPD Hours</span>
+                  </div>
+                  <span className="text-sm font-bold text-blue-700">{HOSPITAL.hours}</span>
+                </div>
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-amber-50 border border-amber-100">
+                  <div className="flex items-center gap-2.5">
+                    <Utensils className="w-4 h-4 text-amber-600" />
+                    <span className="text-sm font-semibold text-slate-700">Lunch Break</span>
+                  </div>
+                  <span className="text-sm font-bold text-amber-700">{HOSPITAL.lunchBreak}</span>
+                </div>
+                <div className="text-xs text-slate-400 leading-relaxed pt-1">
+                  Online booking is available 24/7. Appointments are scheduled during OPD hours only. Please arrive 10 minutes before your token is called.
+                </div>
+              </div>
+            </div>
+
+            {/* Location card */}
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-4">
+                <MapPin className="w-6 h-6 text-emerald-600" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900">Visit Us</h3>
+              <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                {HOSPITAL.name}
+              </p>
+              <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                {HOSPITAL.location}
+              </p>
+              <div className="mt-5 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Getting Here</div>
+                <ul className="space-y-1.5 text-sm text-slate-600">
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0" />
+                    Easily accessible by public transport
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0" />
+                    Parking available on premises
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 flex-shrink-0" />
+                    Wheelchair-friendly entrance
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -238,9 +342,59 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-          <p>{SERVICE_NAME} — {TAGLINE}</p>
+      <footer className="bg-slate-900 text-slate-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* Brand */}
+            <div>
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                  <Stethoscope className="w-5 h-5 text-white" />
+                </div>
+                <div className="leading-none">
+                  <div className="text-base font-bold text-white">{SERVICE_NAME}</div>
+                  <div className="text-[10px] text-slate-400 uppercase tracking-wide">{TAGLINE}</div>
+                </div>
+              </div>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Powered by {HOSPITAL.name} — smart queue management for a smoother
+                dental visit experience.
+              </p>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Hospital</h4>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-2.5">
+                  <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span>{HOSPITAL.name}, {HOSPITAL.location}</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <Clock className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                  <span>{HOSPITAL.hours} (Lunch: {HOSPITAL.lunchBreak})</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <Stethoscope className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                  <span>{HOSPITAL.doctorName}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Links */}
+            <div>
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+              <ul className="space-y-2.5 text-sm">
+                <li><Link to="/register" className="text-slate-400 hover:text-white transition-colors">Book an Appointment</Link></li>
+                <li><Link to="/login" className="text-slate-400 hover:text-white transition-colors">Patient Sign In</Link></li>
+                <li><Link to="/login" className="text-slate-400 hover:text-white transition-colors">Staff Login</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+            <p>{SERVICE_NAME} &copy; {new Date().getFullYear()} {HOSPITAL.name}. All rights reserved.</p>
+          </div>
         </div>
       </footer>
     </div>
