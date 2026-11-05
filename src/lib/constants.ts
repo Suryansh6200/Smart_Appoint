@@ -12,7 +12,7 @@ export const HOSPITAL = {
   location: '25D, Lucknow',
   hours: '9:00 AM – 6:00 PM',
   lunchBreak: '12:00 PM – 1:00 PM',
-  doctorName: 'Dr. Tanya Yadav',
+  doctorName: 'Dr. ABC',
   doctorTitle: 'BDS, MDS — Conservative Dentistry & Endodontics',
   doctorExperience: '12+ years of experience',
   doctorBio:
