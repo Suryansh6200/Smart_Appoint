@@ -14,6 +14,8 @@ import {
   GraduationCap,
   Award,
   Heart,
+  Code,
+  Phone,
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { SERVICE_NAME, TAGLINE, DEPARTMENT, HOSPITAL } from '@/lib/constants';
@@ -397,6 +399,23 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      {/* Developer credit */}
+      <div className="bg-slate-950 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm text-slate-400">
+            <div className="flex items-center gap-2">
+              <Code className="w-4 h-4 text-blue-400" />
+              <span>Website developed by <span className="font-semibold text-white">Suryansh</span></span>
+            </div>
+            <div className="hidden sm:block w-px h-4 bg-slate-700" />
+            <a href="tel:7017255933" className="flex items-center gap-2 hover:text-white transition-colors">
+              <Phone className="w-4 h-4 text-blue-400" />
+              <span>7017255933</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
