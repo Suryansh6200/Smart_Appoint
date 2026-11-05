@@ -16,7 +16,7 @@ export const HOSPITAL = {
   doctorTitle: 'BDS, MDS — Conservative Dentistry & Endodontics',
   doctorExperience: '12+ years of experience',
   doctorBio:
-    'Dr. Tanya Yadav is a senior dental surgeon specializing in restorative and cosmetic dentistry. She has treated over 5,000 patients across root canals, implants, and routine dental care, combining advanced techniques with a gentle, patient-first approach.',
+    'Dr. ABC is a senior dental surgeon specializing in restorative and cosmetic dentistry. With over 5,000 patients treated across root canals, implants, and routine dental care, Dr. ABC combines advanced techniques with a gentle, patient-first approach.',
 };
 
 export const STATUS_CONFIG: Record<
