@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen site-shell">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-slate-950/72 backdrop-blur-[2px] text-white">
+      <section className="relative overflow-hidden bg-white/50 backdrop-blur-sm text-slate-900">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-400 blur-3xl" />
           <div className="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-blue-500 blur-3xl" />
@@ -35,17 +35,17 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 lg:pt-28 lg:pb-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-100 text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/90 border border-blue-300 text-blue-950 text-sm font-semibold mb-6">
                 <Sparkles className="w-4 h-4" />
                 Now serving: {DEPARTMENT} Department
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
                 {SERVICE_NAME}
               </h1>
-              <p className="mt-3 text-xl sm:text-2xl text-blue-200 font-light">
+              <p className="mt-3 text-xl sm:text-2xl text-blue-800 font-medium">
                 {TAGLINE}
               </p>
-              <p className="mt-6 text-blue-100/80 text-lg leading-relaxed max-w-xl">
+              <p className="mt-6 text-slate-700 text-lg leading-relaxed max-w-xl">
                 Book your dental appointment online, get a queue token instantly,
                 and check your estimated wait time from anywhere. No more standing
                 in long lines at the clinic.
@@ -70,7 +70,7 @@ export default function HomePage() {
                     </Link>
                     <Link
                       to="/login"
-                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-700/50 border border-blue-400/30 text-white font-semibold hover:bg-blue-700/80 transition-all backdrop-blur-sm"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-100/90 border border-blue-300 text-blue-950 font-semibold hover:bg-blue-200 transition-all backdrop-blur-sm"
                     >
                       Sign In
                     </Link>
@@ -83,42 +83,42 @@ export default function HomePage() {
             <div className="hidden lg:block">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent rounded-3xl blur-2xl" />
-                <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-2xl">
+                <div className="relative bg-blue-100/90 backdrop-blur-xl border border-blue-300/70 rounded-3xl p-6 shadow-2xl text-slate-900">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
-                        <Stethoscope className="w-4 h-4 text-white" />
+                      <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                        <Stethoscope className="w-4 h-4 text-blue-900" />
                       </div>
-                      <span className="text-sm font-semibold text-white">Your Queue Token</span>
+                      <span className="text-sm font-semibold text-slate-950">Your Queue Token</span>
                     </div>
-                    <span className="text-xs text-blue-200">Today</span>
+                    <span className="text-xs font-medium text-blue-800">Today</span>
                   </div>
-                  <div className="bg-white/10 rounded-2xl p-5 border border-white/10">
-                    <div className="text-xs text-blue-200 uppercase tracking-wider font-medium">Token Number</div>
-                    <div className="text-4xl font-bold text-white mt-1 tracking-tight">TN-001</div>
+                  <div className="bg-blue-200/75 rounded-2xl p-5 border border-blue-300/80">
+                    <div className="text-xs text-blue-800 uppercase tracking-wider font-semibold">Token Number</div>
+                    <div className="text-4xl font-bold text-slate-950 mt-1 tracking-tight">TN-001</div>
                     <div className="mt-4 flex items-center justify-between">
                       <div>
-                        <div className="text-xs text-blue-200">Position in Queue</div>
-                        <div className="text-lg font-semibold text-white">2nd</div>
+                        <div className="text-xs text-blue-800">Position in Queue</div>
+                        <div className="text-lg font-semibold text-slate-950">2nd</div>
                       </div>
-                      <div className="h-10 w-px bg-white/20" />
+                      <div className="h-10 w-px bg-blue-400/50" />
                       <div>
-                        <div className="text-xs text-blue-200">Est. Wait Time</div>
-                        <div className="text-lg font-semibold text-white">20 min</div>
+                        <div className="text-xs text-blue-800">Est. Wait Time</div>
+                        <div className="text-lg font-semibold text-slate-950">20 min</div>
                       </div>
                     </div>
                   </div>
                   <div className="mt-4 flex gap-2">
-                    <div className="flex-1 bg-white/10 rounded-xl p-3 border border-white/10">
+                    <div className="flex-1 bg-blue-200/75 rounded-xl p-3 border border-blue-300/80">
                       <div className="flex items-center gap-1.5">
                         <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                        <span className="text-xs text-blue-100">Waiting</span>
+                        <span className="text-xs font-medium text-blue-900">Waiting</span>
                       </div>
                     </div>
-                    <div className="flex-1 bg-white/10 rounded-xl p-3 border border-white/10">
+                    <div className="flex-1 bg-blue-200/75 rounded-xl p-3 border border-blue-300/80">
                       <div className="flex items-center gap-1.5">
-                        <Clock className="w-3 h-3 text-blue-200" />
-                        <span className="text-xs text-blue-100">Live updates</span>
+                        <Clock className="w-3 h-3 text-blue-800" />
+                        <span className="text-xs font-medium text-blue-900">Live updates</span>
                       </div>
                     </div>
                   </div>
