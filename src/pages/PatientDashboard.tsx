@@ -83,7 +83,7 @@ export default function PatientDashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen site-shell">
         <Header activePage="dashboard" />
         <div className="flex items-center justify-center py-32">
           <Loader2 className="w-8 h-8 text-blue-600 animate-spin" />
@@ -93,7 +93,7 @@ export default function PatientDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen site-shell">
       <Header activePage="dashboard" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Greeting */}
@@ -126,7 +126,7 @@ export default function PatientDashboard() {
 
         {/* Active appointment highlight */}
         {activeAppointment ? (
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 sm:p-8 text-white shadow-lg shadow-blue-600/20 mb-8">
+          <div className="bg-gradient-to-br from-blue-600/92 to-blue-900/92 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-white shadow-lg shadow-blue-600/20 mb-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <div className="flex items-center gap-2 text-blue-200 text-sm font-medium mb-2">

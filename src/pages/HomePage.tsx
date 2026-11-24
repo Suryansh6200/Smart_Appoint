@@ -25,9 +25,9 @@ export default function HomePage() {
   const isStaff = profile?.role === 'staff';
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen site-shell">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 text-white">
+      <section className="relative overflow-hidden bg-slate-950/72 backdrop-blur-[2px] text-white">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-400 blur-3xl" />
           <div className="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-blue-500 blur-3xl" />
@@ -130,7 +130,7 @@ export default function HomePage() {
       </section>
 
       {/* Features */}
-      <section className="py-20 lg:py-24 bg-slate-50">
+      <section className="py-20 lg:py-24 surface-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
@@ -165,7 +165,7 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 surface-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
@@ -202,7 +202,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats / CTA */}
-      <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <section className="py-16 bg-gradient-to-br from-blue-700/90 to-blue-950/90 backdrop-blur-sm text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 gap-6 text-center">
             {[
@@ -224,7 +224,7 @@ export default function HomePage() {
       </section>
 
       {/* Hospital Info */}
-      <section className="py-20 lg:py-24 bg-slate-50">
+      <section className="py-20 lg:py-24 surface-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
@@ -323,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-20 surface-section">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
             Ready to skip the line?

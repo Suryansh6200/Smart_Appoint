@@ -51,7 +51,7 @@ export default function QueueStatusPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen site-shell">
         <Header activePage="queue" />
         <div className="flex items-center justify-center py-32">
           <Loader2 className="w-8 h-8 text-blue-600 animate-spin" />
@@ -61,7 +61,7 @@ export default function QueueStatusPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen site-shell">
       <Header activePage="queue" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex items-center justify-between mb-6">
@@ -82,7 +82,7 @@ export default function QueueStatusPage() {
           {/* Left: My appointment card */}
           <div className="lg:col-span-1 space-y-4">
             {myActiveAppt ? (
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 text-white shadow-lg shadow-blue-600/20 sticky top-24">
+              <div className="bg-gradient-to-br from-blue-600/92 to-blue-900/92 backdrop-blur-sm rounded-2xl p-6 text-white shadow-lg shadow-blue-600/20 sticky top-24">
                 <div className="flex items-center gap-2 text-blue-200 text-sm font-medium mb-3">
                   <Clock className="w-4 h-4" />
                   Your Appointment

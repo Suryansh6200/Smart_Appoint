@@ -56,7 +56,7 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen flex">
       {/* Left brand panel */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 bg-slate-950/72 backdrop-blur-[2px] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-400 blur-3xl" />
           <div className="absolute -bottom-32 -left-24 w-96 h-96 rounded-full bg-blue-500 blur-3xl" />
@@ -85,7 +85,7 @@ export default function RegisterPage() {
       </div>
 
       {/* Right form panel */}
-      <div className="flex-1 flex items-center justify-center bg-slate-50 px-4 py-12">
+      <div className="flex-1 flex items-center justify-center site-shell px-4 py-12">
         <div className="w-full max-w-md">
           <Link to="/" className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-700 mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" />

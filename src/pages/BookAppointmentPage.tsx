@@ -65,7 +65,7 @@ export default function BookAppointmentPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen site-shell">
         <Header activePage="book" />
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/60 p-8 text-center">
@@ -75,7 +75,7 @@ export default function BookAppointmentPage() {
             <h2 className="text-2xl font-bold text-slate-900">Appointment Booked!</h2>
             <p className="mt-2 text-slate-500">Your queue token has been generated successfully.</p>
 
-            <div className="mt-6 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 text-white shadow-lg shadow-blue-600/20">
+            <div className="mt-6 bg-gradient-to-br from-blue-600/92 to-blue-900/92 backdrop-blur-sm rounded-2xl p-6 text-white shadow-lg shadow-blue-600/20">
               <div className="text-sm text-blue-200 uppercase tracking-wider font-medium">Your Token Number</div>
               <div className="text-5xl font-bold tracking-tight mt-1">{success.token_number}</div>
               <div className="mt-4 flex items-center justify-center gap-2 text-blue-100">
@@ -120,7 +120,7 @@ export default function BookAppointmentPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen site-shell">
       <Header activePage="book" />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-6">
