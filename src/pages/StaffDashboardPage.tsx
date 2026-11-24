@@ -201,21 +201,21 @@ export default function StaffDashboardPage() {
             )}
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600/92 to-blue-900/92 backdrop-blur-sm rounded-2xl p-6 text-white shadow-lg shadow-blue-600/20 flex flex-col justify-between">
+          <div className="bg-blue-100/90 backdrop-blur-sm rounded-2xl p-6 text-slate-950 border border-blue-300/80 shadow-lg shadow-blue-600/20 flex flex-col justify-between">
             <div>
-              <div className="text-sm text-blue-200 uppercase tracking-wider font-medium">Next in Queue</div>
+              <div className="text-sm text-blue-800 uppercase tracking-wider font-semibold">Next in Queue</div>
               {nextInQueue.length > 0 ? (
                 <>
                   <div className="text-3xl font-bold mt-2">{nextInQueue[0].token_number}</div>
-                  <div className="text-sm text-blue-200 mt-1">
+                  <div className="text-sm text-slate-700 mt-1">
                     {nextInQueue[0].profiles?.full_name || 'Unknown'}
                   </div>
-                  <div className="text-xs text-blue-300 mt-2">
+                  <div className="text-xs text-blue-800 mt-2">
                     {nextInQueue.length} patient{nextInQueue.length !== 1 ? 's' : ''} waiting · ~{nextInQueue.length * ESTIMATED_MINUTES_PER_PATIENT} min total
                   </div>
                 </>
               ) : (
-                <div className="text-lg text-blue-200 mt-4">Queue is empty</div>
+                <div className="text-lg text-blue-900 mt-4">Queue is empty</div>
               )}
             </div>
             <button

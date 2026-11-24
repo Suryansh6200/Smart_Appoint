@@ -75,10 +75,10 @@ export default function BookAppointmentPage() {
             <h2 className="text-2xl font-bold text-slate-900">Appointment Booked!</h2>
             <p className="mt-2 text-slate-500">Your queue token has been generated successfully.</p>
 
-            <div className="mt-6 bg-gradient-to-br from-blue-600/92 to-blue-900/92 backdrop-blur-sm rounded-2xl p-6 text-white shadow-lg shadow-blue-600/20">
-              <div className="text-sm text-blue-200 uppercase tracking-wider font-medium">Your Token Number</div>
-              <div className="text-5xl font-bold tracking-tight mt-1">{success.token_number}</div>
-              <div className="mt-4 flex items-center justify-center gap-2 text-blue-100">
+            <div className="mt-6 bg-blue-100/90 backdrop-blur-sm rounded-2xl p-6 text-slate-950 border border-blue-300/80 shadow-lg shadow-blue-600/20">
+              <div className="text-sm text-blue-800 uppercase tracking-wider font-semibold">Your Token Number</div>
+              <div className="text-5xl font-bold text-slate-950 tracking-tight mt-1">{success.token_number}</div>
+              <div className="mt-4 flex items-center justify-center gap-2 text-blue-900">
                 <Stethoscope className="w-4 h-4" />
                 <span className="text-sm">{DEPARTMENT} Department</span>
               </div>
@@ -130,13 +130,13 @@ export default function BookAppointmentPage() {
 
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
           {/* Department banner */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-4 text-white flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
-              <Stethoscope className="w-5 h-5 text-white" />
+          <div className="bg-blue-100/90 border-b border-blue-300 px-6 py-4 text-slate-950 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+              <Stethoscope className="w-5 h-5 text-blue-900" />
             </div>
             <div>
               <div className="font-bold">{DEPARTMENT} Department</div>
-              <div className="text-sm text-blue-200">Estimated {ESTIMATED_MINUTES_PER_PATIENT} minutes per patient</div>
+              <div className="text-sm text-blue-800">Estimated {ESTIMATED_MINUTES_PER_PATIENT} minutes per patient</div>
             </div>
           </div>
 

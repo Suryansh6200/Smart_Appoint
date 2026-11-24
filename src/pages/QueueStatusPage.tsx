@@ -82,8 +82,8 @@ export default function QueueStatusPage() {
           {/* Left: My appointment card */}
           <div className="lg:col-span-1 space-y-4">
             {myActiveAppt ? (
-              <div className="bg-gradient-to-br from-blue-600/92 to-blue-900/92 backdrop-blur-sm rounded-2xl p-6 text-white shadow-lg shadow-blue-600/20 sticky top-24">
-                <div className="flex items-center gap-2 text-blue-200 text-sm font-medium mb-3">
+              <div className="bg-blue-100/90 backdrop-blur-sm rounded-2xl p-6 text-slate-950 border border-blue-300/80 shadow-lg shadow-blue-600/20 sticky top-24">
+                <div className="flex items-center gap-2 text-blue-900 text-sm font-semibold mb-3">
                   <Clock className="w-4 h-4" />
                   Your Appointment
                 </div>
@@ -93,29 +93,29 @@ export default function QueueStatusPage() {
                 </div>
 
                 <div className="mt-5 space-y-3">
-                  <div className="bg-white/10 rounded-xl p-4 border border-white/10">
-                    <div className="text-xs text-blue-200 uppercase tracking-wider font-medium">Queue Position</div>
+                  <div className="bg-blue-200/75 rounded-xl p-4 border border-blue-300/80">
+                    <div className="text-xs text-blue-800 uppercase tracking-wider font-semibold">Queue Position</div>
                     <div className="text-2xl font-bold mt-1">
                       {myActiveAppt.status === 'waiting' ? `#${queuePos}` : '—'}
                     </div>
                   </div>
-                  <div className="bg-white/10 rounded-xl p-4 border border-white/10">
-                    <div className="text-xs text-blue-200 uppercase tracking-wider font-medium">Patients Ahead</div>
+                  <div className="bg-blue-200/75 rounded-xl p-4 border border-blue-300/80">
+                    <div className="text-xs text-blue-800 uppercase tracking-wider font-semibold">Patients Ahead</div>
                     <div className="text-2xl font-bold mt-1 flex items-center gap-1.5">
-                      <Users className="w-5 h-5 text-blue-300" />
+                      <Users className="w-5 h-5 text-blue-800" />
                       {myActiveAppt.status === 'waiting' ? patientsAhead : 0}
                     </div>
                   </div>
-                  <div className="bg-white/10 rounded-xl p-4 border border-white/10">
-                    <div className="text-xs text-blue-200 uppercase tracking-wider font-medium">Estimated Wait Time</div>
+                  <div className="bg-blue-200/75 rounded-xl p-4 border border-blue-300/80">
+                    <div className="text-xs text-blue-800 uppercase tracking-wider font-semibold">Estimated Wait Time</div>
                     <div className="text-2xl font-bold mt-1 flex items-center gap-1.5">
-                      <Clock className="w-5 h-5 text-blue-300" />
+                      <Clock className="w-5 h-5 text-blue-800" />
                       {myActiveAppt.status === 'waiting' ? `${estWait} min` : '—'}
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-4 text-xs text-blue-200 bg-white/5 rounded-lg p-3 border border-white/10">
+                <div className="mt-4 text-xs text-blue-900 bg-blue-200/70 rounded-lg p-3 border border-blue-300/80">
                   {myActiveAppt.status === 'waiting' && 'You are in the queue. We will update your status when the dentist is ready for you.'}
                   {myActiveAppt.status === 'called' && 'You have been called! Please proceed to the dental room.'}
                   {myActiveAppt.status === 'in_progress' && 'Your appointment is in progress.'}

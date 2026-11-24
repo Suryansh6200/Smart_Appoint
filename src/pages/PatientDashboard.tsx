@@ -126,10 +126,10 @@ export default function PatientDashboard() {
 
         {/* Active appointment highlight */}
         {activeAppointment ? (
-          <div className="bg-gradient-to-br from-blue-600/92 to-blue-900/92 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-white shadow-lg shadow-blue-600/20 mb-8">
+          <div className="bg-blue-100/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 text-slate-950 border border-blue-300/80 shadow-lg shadow-blue-600/20 mb-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <div className="flex items-center gap-2 text-blue-200 text-sm font-medium mb-2">
+                <div className="flex items-center gap-2 text-blue-900 text-sm font-semibold mb-2">
                   <Clock className="w-4 h-4" />
                   Your Active Appointment
                 </div>
@@ -137,7 +137,7 @@ export default function PatientDashboard() {
                   <span className="text-3xl font-bold tracking-tight">{activeAppointment.token_number}</span>
                   <StatusBadge status={activeAppointment.status} size="sm" />
                 </div>
-                <p className="mt-2 text-blue-100 text-sm">{activeAppointment.reason}</p>
+                <p className="mt-2 text-slate-700 text-sm">{activeAppointment.reason}</p>
               </div>
               <div className="flex gap-6">
                 {activeAppointment.status === 'waiting' && (
@@ -145,14 +145,14 @@ export default function PatientDashboard() {
                     <div className="text-2xl font-bold">
                       {getPatientsAhead(allTodayAppointments, activeAppointment.token_number) + 1}
                     </div>
-                    <div className="text-xs text-blue-200">Position in Queue</div>
+                    <div className="text-xs text-blue-800">Position in Queue</div>
                   </div>
                 )}
                 <div className="text-center">
                   <div className="text-2xl font-bold">
                     {(getPatientsAhead(allTodayAppointments, activeAppointment.token_number) + 1) * ESTIMATED_MINUTES_PER_PATIENT}
                   </div>
-                  <div className="text-xs text-blue-200">Est. Wait (min)</div>
+                  <div className="text-xs text-blue-800">Est. Wait (min)</div>
                 </div>
                 <Link
                   to="/queue"
