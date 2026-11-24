@@ -19,7 +19,7 @@
 > Add your images to a `docs/screenshots/` folder in the repo using the file names below.
 
 <p align="center">
-  <img src="docs/screenshots/home.png" alt="Home Page" width="48%" />
+  <img src="docs/screenshots/Screenshot 2026-11-24 at 11.08.01 AM.png.png" alt="Home Page" width="48%" />
   <img src="docs/screenshots/login.png" alt="Register / Login" width="48%" />
 </p>
 <p align="center">
