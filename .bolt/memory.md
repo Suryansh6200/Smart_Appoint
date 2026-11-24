@@ -20,10 +20,11 @@
 - Icons from lucide-react (per global instructions).
 - `@/` path alias for `src/` imports.
 - Shared/centralized card styling rather than per-screen styling; same root classes reused across loading and normal states.
-- Glassmorphism cards: translucent background, backdrop blur, soft borders, shadows — lets background image show through while keeping text readable.
-- Full-bleed background image layered behind all screens.
-- Prior base theme: white panels over slate page surfaces (now replaced by glass + image).
-- Avoid opaque solid card backgrounds that hide the background image.
+- Glassmorphism cards: translucent background, backdrop blur, soft borders, shadows.
+- Full-bleed healthcare background image layered behind all screens.
+- Background overlay: transparent blur (no heavy white wash); lets image show through clearly while keeping content readable.
+- Prior iterations: white panels over slate surfaces → glass + white blur overlay → transparent blur overlay (current).
+- Avoid opaque solid card backgrounds and heavy white washes that hide the background image.
 
 ## Decisions, constraints & rationale
 
@@ -32,7 +33,8 @@
 - Private publish available for restricted access (e.g., clinic staff only).
 - Custom domain supported on paid plans.
 - No extra UI/icon packages beyond what the template provides.
-- Background image + glass-blur styling applied site-wide via shared classes for consistency and maintainability.
+- Background image + glass styling applied site-wide via shared classes for consistency and maintainability.
+- White blur overlay replaced with transparent blur per user request for clearer background visibility.
 
 ## Open questions & assumptions
 

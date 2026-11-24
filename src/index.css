@@ -7,16 +7,28 @@
     @apply antialiased;
     min-width: 320px;
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    position: relative;
     background-color: #e8edf6;
-    background-image:
-      linear-gradient(rgba(239, 244, 252, 0.62), rgba(232, 237, 246, 0.78)),
-      url('/images/Pastel_Healthcare_Dashboard_Workspace.png');
+    background-image: url('/images/Pastel_Healthcare_Dashboard_Workspace.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
 
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
   #root {
+    position: relative;
+    z-index: 1;
     min-height: 100vh;
   }
 }
